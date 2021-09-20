@@ -47,3 +47,7 @@ install(TARGETS interface_sensnif DESTINATION lib/rplanalyzer)
 add_library(interface_cc2531 SHARED interface_cc2531.c)
 target_link_libraries(interface_cc2531 ${RPLANALYZER_LIBRARIES} pthread ${LibUSB_LIBRARIES})
 install(TARGETS interface_cc2531 DESTINATION lib/rplanalyzer)
+
+add_library(interface_zep SHARED interface_zep.c)
+target_link_libraries(interface_zep ${RPLANALYZER_LIBRARIES})
+install(TARGETS interface_snif DESTINATION lib/rplanalyzer)
